@@ -1,0 +1,21 @@
+<div class="modal-content">
+  <div class="modal-header">
+  </div>
+  <div class="modal-body">
+      <p>
+          <iframe class="map-top" width="598" height="450" [src]="url | safe" allowfullscreen ></iframe>
+        </p>
+        <p>
+          {{msg}}
+        </p>
+  </div>
+  <div class="modal-footer">
+      <span>Click "Send SMS" to send this direction to the patient.
+      </span>
+      <button class="btn btn-default" type="button" (click)="navigateToPrevious()">Cancel</button>
+      <button class="btn btn-primary" type="button" (click)="sendSMS()">Send SMS</button>
+  </div>
+  <div style="padding-left: 10px;">
+    <label>{{confirmation}}</label>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="example-container mat-elevation-z8">
+    <div class="example-header">
+      <md-form-field floatPlaceholder="never">
+        <input mdInput #filter placeholder="Filter file">
+      </md-form-field>
+    </div>
+    
+    <md-table #table [dataSource]="dataSource">
+  
+      <ng-container mdColumnDef="DateSent">
+          <md-header-cell *mdHeaderCellDef> Date Sent </md-header-cell>
+          <md-cell *mdCellDef="let element"> {{element.DateSent | date:short}} </md-cell>
+        </ng-container>
+
+      <ng-container mdColumnDef="Date">
+        <md-header-cell *mdHeaderCellDef> Date </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.Date | date:short}} </md-cell>
+      </ng-container>
+  
+      <ng-container mdColumnDef="Time">
+        <md-header-cell *mdHeaderCellDef> Time </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.Time}} </md-cell>
+      </ng-container>
+  
+      <ng-container mdColumnDef="Address">
+        <md-header-cell *mdHeaderCellDef> Address </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.Address}} </md-cell>
+      </ng-container>
+  
+      <ng-container mdColumnDef="City">
+        <md-header-cell *mdHeaderCellDef> City </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.City}} </md-cell>
+      </ng-container>
+  
+      <ng-container mdColumnDef="State">
+        <md-header-cell *mdHeaderCellDef> Processed </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.State}} </md-cell>
+      </ng-container>
+  
+      <ng-container mdColumnDef="Zip">
+        <md-header-cell *mdHeaderCellDef> Zip </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.Zip}} </md-cell>
+      </ng-container>  
+  
+      <ng-container mdColumnDef="Phone">
+        <md-header-cell *mdHeaderCellDef> Phone </md-header-cell>
+        <md-cell *mdCellDef="let element"> {{element.Phone}} </md-cell>
+      </ng-container>  
+  
+      <ng-container mdColumnDef="Detail">
+        <md-header-cell *mdHeaderCellDef> Preview </md-header-cell>
+        <md-cell *mdCellDef="let element" >
+            <button md-raised-button (click)="redirectToMsgDetail(element)">Open</button>
+        </md-cell>
+      </ng-container>
+  
+      <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+      <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+    </md-table>
+  </div>
+  
+  

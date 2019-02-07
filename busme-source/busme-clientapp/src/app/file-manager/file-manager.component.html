@@ -1,0 +1,47 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-header">
+    <md-form-field floatPlaceholder="never">
+      <input mdInput #filter placeholder="Filter file">
+    </md-form-field>
+  </div>
+  
+  <md-table #table [dataSource]="dataSource">
+
+    <ng-container mdColumnDef="fileName">
+        <md-header-cell *mdHeaderCellDef> File Name </md-header-cell>
+        <md-cell *mdCellDef="let element"> <a [routerLink]="['/fileview']" [queryParams]="{token: element.fileName}">{{element.originalName}}</a>  </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="uploadDate">
+      <md-header-cell *mdHeaderCellDef> Date </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.uploadDate | date:short}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="uploadBy">
+      <md-header-cell *mdHeaderCellDef> Upload By </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.uploadBy}} </md-cell>
+    </ng-container>
+
+    <!-- <ng-container mdColumnDef="isProcessed">
+      <md-header-cell *mdHeaderCellDef> Processed </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.isProcessed}} </md-cell>
+    </ng-container> -->
+
+    <!-- <ng-container mdColumnDef="SendSms">
+      <md-header-cell *mdHeaderCellDef> Send SMS </md-header-cell>
+      <md-cell *mdCellDef="let element" >
+          <button md-raised-button (click)="sendFile(element)">Send SMS</button> 
+     </md-cell>
+    </ng-container> -->
+
+    <ng-container mdColumnDef="DeleteFile">
+        <md-header-cell *mdHeaderCellDef> Delete This File </md-header-cell>
+        <md-cell *mdCellDef="let element" >
+            <button md-raised-button (click)="deleteFile(element)">Delete</button> 
+       </md-cell>
+      </ng-container>
+
+    <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
+</div>

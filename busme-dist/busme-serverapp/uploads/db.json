@@ -1,0 +1,91 @@
+{
+  "ENV": "NODEJS",
+  "autosave": false,
+  "autosaveHandle": null,
+  "autosaveInterval": 5000,
+  "collections": [
+    {
+      "DynamicViews": [],
+      "adaptiveBinaryIndices": true,
+      "asyncListeners": false,
+      "autoupdate": false,
+      "binaryIndices": {},
+      "cachedBinaryIndex": null,
+      "cachedData": null,
+      "cachedIndex": null,
+      "changes": [],
+      "cloneMethod": "parse-stringify",
+      "cloneObjects": false,
+      "constraints": null,
+      "data": [
+        {
+          "$loki": 19,
+          "destination": "uploads/",
+          "encoding": "7bit",
+          "fieldname": "file",
+          "filename": "a950521da6bcf1d1af300c65559052fd",
+          "meta": {
+            "created": 1549502972605,
+            "revision": 0,
+            "version": 0
+          },
+          "mimetype": "application/vnd.ms-excel",
+          "originalname": "testfile.csv",
+          "path": "uploads\\a950521da6bcf1d1af300c65559052fd",
+          "size": 220
+        }
+      ],
+      "dirty": false,
+      "disableChangesApi": true,
+      "disableDeltaChangesApi": true,
+      "events": {
+        "close": [],
+        "delete": [
+          null
+        ],
+        "error": [],
+        "flushbuffer": [],
+        "insert": [],
+        "pre-insert": [],
+        "pre-update": [],
+        "update": [],
+        "warning": [
+          null
+        ]
+      },
+      "idIndex": [
+        19
+      ],
+      "maxId": 20,
+      "name": "appointments",
+      "objType": "appointments",
+      "serializableIndices": true,
+      "transactional": false,
+      "transforms": {},
+      "ttl": null,
+      "uniqueNames": []
+    }
+  ],
+  "databaseVersion": 1.5,
+  "engineVersion": 1.5,
+  "events": {
+    "changes": [],
+    "close": [],
+    "flushChanges": [],
+    "init": [
+      null
+    ],
+    "loaded": [],
+    "warning": []
+  },
+  "filename": "uploads/db.json",
+  "options": {
+    "destructureDelimiter": "$<\n",
+    "persistenceMethod": "fs",
+    "serializationMethod": "normal"
+  },
+  "persistenceAdapter": null,
+  "persistenceMethod": "fs",
+  "throttledSaves": true,
+  "verbose": false
+}
