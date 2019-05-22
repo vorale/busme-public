@@ -14,7 +14,7 @@ Run Client Side:
 
 Browse the site:
 Open Browser (Chrome is recommended)
-Navigate to address: http://localhost:8080
+Navigate to address: http://localhost:8080 (Only localhost will work, using IP address is not working)
 
 SideNote:
 All uploaded files are stored under busme-serverapp/uploads
