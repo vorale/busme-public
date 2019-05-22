@@ -59,22 +59,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 // import { AuthService } from './auth.service';
-var AppComponent = (function () {
+var AppComponent = /** @class */ (function () {
     // constructor(private authService: AuthService) {
     // }
     function AppComponent() {
         this.title = 'app';
     }
+    AppComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-root',
+            template: __webpack_require__("../../../../../src/app/app.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/app.component.css")],
+        }),
+        __metadata("design:paramtypes", [])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-root',
-        template: __webpack_require__("../../../../../src/app/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app.component.css")],
-    }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
 
 //# sourceMappingURL=app.component.js.map
 
@@ -137,61 +137,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // import { CallbackComponent } from './callback/callback.component';
 // import { AuthGuard } from './auth-guard.service';
 // import { AuthService} from './auth.service';
-var AppModule = (function () {
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__appointment_create_appointment_create_component__["a" /* AppointmentCreateComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__direction_direction_component__["a" /* DirectionComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__nav_menu_nav_menu_component__["a" /* NavMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__direction_direction_component__["a" /* DirectionComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__file_manager_file_manager_component__["a" /* FileManagerComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__fileview_fileview_component__["a" /* FileviewComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__fileview_fileview_component__["b" /* SafePipe */],
+                __WEBPACK_IMPORTED_MODULE_16__msg_detail_msg_detail_component__["a" /* MsgDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__log_viewer_log_viewer_component__["a" /* LogViewerComponent */]
+                // CallbackComponent,
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_15_ng2_modal__["ModalModule"],
+                __WEBPACK_IMPORTED_MODULE_12__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_7_ng2_file_upload__["FileUploadModule"],
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["RouterModule"].forRoot([
+                    { path: '', redirectTo: 'home', pathMatch: 'full' },
+                    { path: 'appointment-create', component: __WEBPACK_IMPORTED_MODULE_5__appointment_create_appointment_create_component__["a" /* AppointmentCreateComponent */] },
+                    { path: 'direction', component: __WEBPACK_IMPORTED_MODULE_8__direction_direction_component__["a" /* DirectionComponent */] },
+                    { path: 'file-manager', component: __WEBPACK_IMPORTED_MODULE_9__file_manager_file_manager_component__["a" /* FileManagerComponent */] },
+                    { path: 'fileview', component: __WEBPACK_IMPORTED_MODULE_14__fileview_fileview_component__["a" /* FileviewComponent */] },
+                    { path: 'msg-detail', component: __WEBPACK_IMPORTED_MODULE_16__msg_detail_msg_detail_component__["a" /* MsgDetailComponent */] },
+                    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_17__login_login_component__["a" /* LoginComponent */] },
+                    { path: 'log-viewer', component: __WEBPACK_IMPORTED_MODULE_18__log_viewer_log_viewer_component__["a" /* LogViewerComponent */] },
+                    // { path: 'appointment-create', component: AppointmentCreateComponent, canActivate: [AuthGuard] },
+                    // { path: 'direction', component: DirectionComponent, canActivate: [AuthGuard] },
+                    // { path: 'file-manager', component: FileManagerComponent, canActivate: [AuthGuard] },
+                    // { path: 'fileview', component: FileviewComponent, canActivate: [AuthGuard]},
+                    // { path: 'callback', component: CallbackComponent},
+                    { path: '**', redirectTo: 'home' }
+                ]),
+                __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap__["a" /* AlertModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["e" /* MdTableModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["c" /* MdFormFieldModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["d" /* MdInputModule */],
+                __WEBPACK_IMPORTED_MODULE_10__angular_material__["b" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__["m" /* CdkTableModule */],
+                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */]
+            ],
+            providers: [
+            //AUTH_PROVIDERS,
+            // AuthService,
+            // AuthGuard
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__appointment_create_appointment_create_component__["a" /* AppointmentCreateComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__direction_direction_component__["a" /* DirectionComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__nav_menu_nav_menu_component__["a" /* NavMenuComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__direction_direction_component__["a" /* DirectionComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__file_manager_file_manager_component__["a" /* FileManagerComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__fileview_fileview_component__["a" /* FileviewComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__fileview_fileview_component__["b" /* SafePipe */],
-            __WEBPACK_IMPORTED_MODULE_16__msg_detail_msg_detail_component__["a" /* MsgDetailComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__log_viewer_log_viewer_component__["a" /* LogViewerComponent */]
-            // CallbackComponent,
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_15_ng2_modal__["ModalModule"],
-            __WEBPACK_IMPORTED_MODULE_12__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_7_ng2_file_upload__["FileUploadModule"],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["RouterModule"].forRoot([
-                { path: '', redirectTo: 'home', pathMatch: 'full' },
-                { path: 'appointment-create', component: __WEBPACK_IMPORTED_MODULE_5__appointment_create_appointment_create_component__["a" /* AppointmentCreateComponent */] },
-                { path: 'direction', component: __WEBPACK_IMPORTED_MODULE_8__direction_direction_component__["a" /* DirectionComponent */] },
-                { path: 'file-manager', component: __WEBPACK_IMPORTED_MODULE_9__file_manager_file_manager_component__["a" /* FileManagerComponent */] },
-                { path: 'fileview', component: __WEBPACK_IMPORTED_MODULE_14__fileview_fileview_component__["a" /* FileviewComponent */] },
-                { path: 'msg-detail', component: __WEBPACK_IMPORTED_MODULE_16__msg_detail_msg_detail_component__["a" /* MsgDetailComponent */] },
-                { path: 'login', component: __WEBPACK_IMPORTED_MODULE_17__login_login_component__["a" /* LoginComponent */] },
-                { path: 'log-viewer', component: __WEBPACK_IMPORTED_MODULE_18__log_viewer_log_viewer_component__["a" /* LogViewerComponent */] },
-                // { path: 'appointment-create', component: AppointmentCreateComponent, canActivate: [AuthGuard] },
-                // { path: 'direction', component: DirectionComponent, canActivate: [AuthGuard] },
-                // { path: 'file-manager', component: FileManagerComponent, canActivate: [AuthGuard] },
-                // { path: 'fileview', component: FileviewComponent, canActivate: [AuthGuard]},
-                // { path: 'callback', component: CallbackComponent},
-                { path: '**', redirectTo: 'home' }
-            ]),
-            __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap__["a" /* AlertModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_10__angular_material__["e" /* MdTableModule */],
-            __WEBPACK_IMPORTED_MODULE_10__angular_material__["c" /* MdFormFieldModule */],
-            __WEBPACK_IMPORTED_MODULE_10__angular_material__["d" /* MdInputModule */],
-            __WEBPACK_IMPORTED_MODULE_10__angular_material__["b" /* MatSnackBarModule */],
-            __WEBPACK_IMPORTED_MODULE_11__angular_cdk_table__["m" /* CdkTableModule */],
-            __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */]
-        ],
-        providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
-    })
-], AppModule);
 
 //# sourceMappingURL=app.module.js.map
 
@@ -243,7 +247,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 // const URL = '/api/';
 var URL = 'http://localhost:3000/appointment/';
-var AppointmentCreateComponent = (function () {
+var AppointmentCreateComponent = /** @class */ (function () {
     function AppointmentCreateComponent() {
         this.uploader = new __WEBPACK_IMPORTED_MODULE_1_ng2_file_upload__["FileUploader"]({ url: URL });
         this.hasBaseDropZoneOver = false;
@@ -257,16 +261,16 @@ var AppointmentCreateComponent = (function () {
     AppointmentCreateComponent.prototype.fileOverAnother = function (e) {
         this.hasAnotherDropZoneOver = e;
     };
+    AppointmentCreateComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-appointment-create',
+            template: __webpack_require__("../../../../../src/app/appointment-create/appointment-create.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/appointment-create/appointment-create.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AppointmentCreateComponent);
     return AppointmentCreateComponent;
 }());
-AppointmentCreateComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-appointment-create',
-        template: __webpack_require__("../../../../../src/app/appointment-create/appointment-create.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/appointment-create/appointment-create.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], AppointmentCreateComponent);
 
 //# sourceMappingURL=appointment-create.component.js.map
 
@@ -313,7 +317,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var DirectionComponent = (function () {
+var DirectionComponent = /** @class */ (function () {
     function DirectionComponent() {
         // this.originQueryString = this.origin.Address + "+" + this.origin.City + "+" + this.origin.State;
         this.destQueryString = "5555+Conner+St+Detroit+MI+48213";
@@ -322,22 +326,22 @@ var DirectionComponent = (function () {
     }
     DirectionComponent.prototype.ngOnInit = function () {
     };
+    var _a;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('iframe'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+    ], DirectionComponent.prototype, "iframe", void 0);
+    DirectionComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-direction',
+            template: __webpack_require__("../../../../../src/app/direction/direction.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/direction/direction.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], DirectionComponent);
     return DirectionComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('iframe'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-], DirectionComponent.prototype, "iframe", void 0);
-DirectionComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-direction',
-        template: __webpack_require__("../../../../../src/app/direction/direction.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/direction/direction.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], DirectionComponent);
 
-var _a;
 //# sourceMappingURL=direction.component.js.map
 
 /***/ }),
@@ -426,7 +430,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var FileManagerComponent = (function () {
+var FileManagerComponent = /** @class */ (function () {
     function FileManagerComponent(http) {
         this.http = http;
         // displayedColumns = ['fileName', 'uploadDate', 'uploadBy', 'isProcessed', 'SendSms', 'DeleteFile'];
@@ -467,22 +471,23 @@ var FileManagerComponent = (function () {
             window.location.reload();
         });
     };
+    var _a, _b;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filter'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+    ], FileManagerComponent.prototype, "filter", void 0);
+    FileManagerComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-file-manager',
+            template: __webpack_require__("../../../../../src/app/file-manager/file-manager.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/file-manager/file-manager.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object])
+    ], FileManagerComponent);
     return FileManagerComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filter'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-], FileManagerComponent.prototype, "filter", void 0);
-FileManagerComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-file-manager',
-        template: __webpack_require__("../../../../../src/app/file-manager/file-manager.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/file-manager/file-manager.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object])
-], FileManagerComponent);
 
-var FileDatabase = (function () {
+var FileDatabase = /** @class */ (function () {
     function FileDatabase(http) {
         this.http = http;
         /** Stream that emits whenever the data has been modified. */
@@ -515,7 +520,7 @@ var FileDatabase = (function () {
  * altered, the observable should emit that new set of data on the stream. In our case here,
  * we return a stream that contains only one set of data that doesn't change.
  */
-var FileDataSource = (function (_super) {
+var FileDataSource = /** @class */ (function (_super) {
     __extends(FileDataSource, _super);
     function FileDataSource(database, http) {
         var _this = _super.call(this) || this;
@@ -548,7 +553,6 @@ var FileDataSource = (function (_super) {
     return FileDataSource;
 }(__WEBPACK_IMPORTED_MODULE_1__angular_cdk_collections__["a" /* DataSource */]));
 
-var _a, _b;
 //# sourceMappingURL=file-manager.component.js.map
 
 /***/ }),
@@ -640,21 +644,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SafePipe = (function () {
+var SafePipe = /** @class */ (function () {
     function SafePipe(sanitizer) {
         this.sanitizer = sanitizer;
     }
     SafePipe.prototype.transform = function (url) {
         return this.sanitizer.bypassSecurityTrustResourceUrl(url);
     };
+    var _a;
+    SafePipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'safe' }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object])
+    ], SafePipe);
     return SafePipe;
 }());
-SafePipe = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'safe' }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object])
-], SafePipe);
 
-var FileviewComponent = (function () {
+var FileviewComponent = /** @class */ (function () {
     function FileviewComponent(http, activatedRoute, domSanitizer, router) {
         this.http = http;
         this.activatedRoute = activatedRoute;
@@ -688,22 +693,23 @@ var FileviewComponent = (function () {
         var qs = JSON.stringify(content);
         this.router.navigateByUrl("/msg-detail?data=" + qs);
     };
+    var _b, _c, _d, _e, _f;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filter'),
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object)
+    ], FileviewComponent.prototype, "filter", void 0);
+    FileviewComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-fileview',
+            template: __webpack_require__("../../../../../src/app/fileview/fileview.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/fileview/fileview.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _f || Object])
+    ], FileviewComponent);
     return FileviewComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filter'),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object)
-], FileviewComponent.prototype, "filter", void 0);
-FileviewComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-fileview',
-        template: __webpack_require__("../../../../../src/app/fileview/fileview.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/fileview/fileview.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _f || Object])
-], FileviewComponent);
 
-var FileviewDatabase = (function () {
+var FileviewDatabase = /** @class */ (function () {
     function FileviewDatabase(http, token) {
         this.http = http;
         this.token = token;
@@ -737,7 +743,7 @@ var FileviewDatabase = (function () {
  * altered, the observable should emit that new set of data on the stream. In our case here,
  * we return a stream that contains only one set of data that doesn't change.
  */
-var FileviewDataSource = (function (_super) {
+var FileviewDataSource = /** @class */ (function (_super) {
     __extends(FileviewDataSource, _super);
     function FileviewDataSource(database) {
         var _this = _super.call(this) || this;
@@ -769,7 +775,6 @@ var FileviewDataSource = (function (_super) {
     return FileviewDataSource;
 }(__WEBPACK_IMPORTED_MODULE_2__angular_cdk_collections__["a" /* DataSource */]));
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=fileview.component.js.map
 
 /***/ }),
@@ -859,7 +864,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var LogViewerComponent = (function () {
+var LogViewerComponent = /** @class */ (function () {
     function LogViewerComponent(http, activatedRoute, domSanitizer, router) {
         this.http = http;
         this.activatedRoute = activatedRoute;
@@ -893,22 +898,23 @@ var LogViewerComponent = (function () {
         var qs = JSON.stringify(content);
         this.router.navigateByUrl("/msg-detail?data=" + qs);
     };
+    var _a, _b, _c, _d, _e;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filter'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+    ], LogViewerComponent.prototype, "filter", void 0);
+    LogViewerComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-log-viewer',
+            template: __webpack_require__("../../../../../src/app/log-viewer/log-viewer.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/log-viewer/log-viewer.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _e || Object])
+    ], LogViewerComponent);
     return LogViewerComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filter'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-], LogViewerComponent.prototype, "filter", void 0);
-LogViewerComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-log-viewer',
-        template: __webpack_require__("../../../../../src/app/log-viewer/log-viewer.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/log-viewer/log-viewer.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _e || Object])
-], LogViewerComponent);
 
-var FileviewDatabase = (function () {
+var FileviewDatabase = /** @class */ (function () {
     function FileviewDatabase(http, token) {
         this.http = http;
         this.token = token;
@@ -943,7 +949,7 @@ var FileviewDatabase = (function () {
  * altered, the observable should emit that new set of data on the stream. In our case here,
  * we return a stream that contains only one set of data that doesn't change.
  */
-var FileviewDataSource = (function (_super) {
+var FileviewDataSource = /** @class */ (function (_super) {
     __extends(FileviewDataSource, _super);
     function FileviewDataSource(database) {
         var _this = _super.call(this) || this;
@@ -975,7 +981,6 @@ var FileviewDataSource = (function (_super) {
     return FileviewDataSource;
 }(__WEBPACK_IMPORTED_MODULE_2__angular_cdk_collections__["a" /* DataSource */]));
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=log-viewer.component.js.map
 
 /***/ }),
@@ -1023,7 +1028,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var LoginComponent = (function () {
+var LoginComponent = /** @class */ (function () {
     function LoginComponent(router) {
         this.router = router;
     }
@@ -1032,18 +1037,18 @@ var LoginComponent = (function () {
     LoginComponent.prototype.authenticate = function () {
         this.router.navigateByUrl("/");
     };
+    var _a;
+    LoginComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-login',
+            template: __webpack_require__("../../../../../src/app/login/login.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/login/login.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _a || Object])
+    ], LoginComponent);
     return LoginComponent;
 }());
-LoginComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-login',
-        template: __webpack_require__("../../../../../src/app/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/login/login.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _a || Object])
-], LoginComponent);
 
-var _a;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
@@ -1069,7 +1074,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/msg-detail/msg-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-content\">\n  <div class=\"modal-header\">\n  </div>\n  <div class=\"modal-body\">\n      <p>\n          <iframe class=\"map-top\" width=\"598\" height=\"450\" [src]=\"url | safe\" allowfullscreen ></iframe>\n        </p>\n        <p>\n          {{msg}}\n        </p>\n  </div>\n  <div class=\"modal-footer\">\n      <span>Click \"Send SMS\" to send this direction to the patient.\n      </span>\n      <button class=\"btn btn-default\" type=\"button\" (click)=\"navigateToPrevious()\">Cancel</button>\n      <button class=\"btn btn-primary\" type=\"button\" (click)=\"sendSMS()\">Send SMS</button>\n  </div>\n  <div style=\"padding-left: 10px;\">\n    <label>{{confirmation}}</label>\n  </div>\n</div>"
+module.exports = "<div class=\"modal-content\">\n  <div class=\"modal-header\">\n  </div>\n  <div class=\"modal-body\">\n      <p>\n          <iframe class=\"map-top\" width=\"598\" height=\"450\" [src]=\"url | safe\" allowfullscreen ></iframe>\n        </p>\n        <p>\n          {{msg}}\n        </p>\n  </div>\n  <div class=\"modal-footer\">\n      <span>Click \"Send SMS\" to send this direction to the patient.\n      </span>\n      <button class=\"btn btn-default\" type=\"button\" (click)=\"navigateToPrevious()\">Cancel</button>\n      <button class=\"btn btn-primary\" type=\"button\" (click)=\"sendTwilioSMS()\">Send SMS</button>\n  </div>\n  <div style=\"padding-left: 10px;\">\n    <label>{{confirmation}}</label>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1111,7 +1116,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MsgDetailComponent = (function () {
+var MsgDetailComponent = /** @class */ (function () {
     function MsgDetailComponent(_location, http, activatedRoute, domSanitizer, router, snackBar) {
         this._location = _location;
         this.http = http;
@@ -1137,6 +1142,32 @@ var MsgDetailComponent = (function () {
     };
     MsgDetailComponent.prototype.navigateToPrevious = function () {
         this._location.back();
+    };
+    MsgDetailComponent.prototype.sendTwilioSMS = function () {
+        var _this = this;
+        this.http.post("http://localhost:3000/twiliosms", {
+            body: this.msg,
+            to: this.replaceAll(this.parsedData.Phone, '-', '')
+        }).map(function (res) {
+            if (res) {
+                if (res.status === 201) {
+                    return [{ status: res.status, json: res }];
+                }
+                else if (res.status === 200) {
+                    return [{ status: res.status, json: res }];
+                }
+            }
+        }).catch(function (error) {
+            if (error.status < 400 || error.status === 500) {
+                return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(new Error(error.status));
+            }
+        })
+            .subscribe(function (res) {
+            _this.confirmation = 'SMS has been sent to the patient.';
+        }, function (err) {
+            _this.confirmation = 'SMS has been sent to the patient.';
+            console.log(err);
+        });
     };
     MsgDetailComponent.prototype.sendSMS = function () {
         var _this = this;
@@ -1174,18 +1205,18 @@ var MsgDetailComponent = (function () {
     MsgDetailComponent.prototype.replaceAll = function (base, search, replacement) {
         return base.replace(new RegExp(search, 'g'), replacement);
     };
+    var _a, _b, _c, _d, _e, _f;
+    MsgDetailComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-msg-detail',
+            template: __webpack_require__("../../../../../src/app/msg-detail/msg-detail.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/msg-detail/msg-detail.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__angular_common__["Location"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_common__["Location"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__angular_material__["a" /* MatSnackBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_material__["a" /* MatSnackBar */]) === "function" && _f || Object])
+    ], MsgDetailComponent);
     return MsgDetailComponent;
 }());
-MsgDetailComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-msg-detail',
-        template: __webpack_require__("../../../../../src/app/msg-detail/msg-detail.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/msg-detail/msg-detail.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__angular_common__["Location"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_common__["Location"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__angular_material__["a" /* MatSnackBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_material__["a" /* MatSnackBar */]) === "function" && _f || Object])
-], MsgDetailComponent);
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=msg-detail.component.js.map
 
 /***/ }),
@@ -1231,21 +1262,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var NavMenuComponent = (function () {
+var NavMenuComponent = /** @class */ (function () {
     function NavMenuComponent() {
     }
     NavMenuComponent.prototype.ngOnInit = function () {
     };
+    NavMenuComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'nav-menu',
+            template: __webpack_require__("../../../../../src/app/nav-menu/nav-menu.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/nav-menu/nav-menu.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], NavMenuComponent);
     return NavMenuComponent;
 }());
-NavMenuComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'nav-menu',
-        template: __webpack_require__("../../../../../src/app/nav-menu/nav-menu.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/nav-menu/nav-menu.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], NavMenuComponent);
 
 //# sourceMappingURL=nav-menu.component.js.map
 
@@ -1260,7 +1291,6 @@ NavMenuComponent = __decorate([
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
