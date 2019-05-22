@@ -18,6 +18,7 @@ const parse = require("csv-parse/lib/sync");
 const maps = require("@google/maps");
 const htmlToText = require("html-to-text");
 const bodyParser = require("body-parser");
+const twilio_1 = require("twilio");
 const utils_1 = require("./utils");
 // setup
 const DB_NAME = 'db.json';
@@ -131,6 +132,23 @@ app.post('/sms', (req, res) => __awaiter(this, void 0, void 0, function* () {
         const data = col.insert(req.log);
         db.saveDatabase();
         res.send({ id: data.$loki, log: req.log });
+    }
+    catch (err) {
+        console.log(err);
+        res.sendStatus(400);
+    }
+}));
+app.post('/twiliosms', (req, res) => __awaiter(this, void 0, void 0, function* () {
+    try {
+        let accountSid = 'AC3ba26734faf6b682464066799ddfde45';
+        let authToken = '7fe72c97fc3b084236cea2df5f2fcff1';
+        let client = new twilio_1.Twilio(accountSid, authToken);
+        client.messages.create({
+            body: req.body.body,
+            from: '+12486716109',
+            to: req.body.to
+        });
+        res.send({ msg: 'success' });
     }
     catch (err) {
         console.log(err);
