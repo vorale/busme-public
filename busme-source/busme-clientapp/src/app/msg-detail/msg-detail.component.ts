@@ -14,6 +14,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Direction } from 'ngx-bootstrap/carousel/carousel.component';
+import { Twilio } from 'twilio';
 
 @Component({
   selector: 'app-msg-detail',
@@ -56,6 +57,33 @@ export class MsgDetailComponent implements OnInit {
   navigateToPrevious()
   {
     this._location.back();
+  }
+  
+  sendTwilioSMS() {
+    this.http.post("http://localhost:3000/twiliosms", {
+        body: this.msg,
+        to: this.replaceAll(this.parsedData.Phone, '-', '')
+      }).map((res: Response) => {
+        if (res) {
+            if (res.status === 201) {
+                return [{ status: res.status, json: res }]
+            }
+            else if (res.status === 200) {
+                return [{ status: res.status, json: res }]
+            }
+        }
+    }).catch((error: any) => {
+        if (error.status < 400 ||  error.status ===500) {
+            return Observable.throw(new Error(error.status));
+        }
+    })
+    .subscribe(res => {
+        this.confirmation = 'SMS has been sent to the patient.'; 
+      },
+      err => {
+        this.confirmation = 'SMS has been sent to the patient.'; 
+        console.log(err);
+      } );
   }
 
   sendSMS() {

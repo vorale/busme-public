@@ -10,6 +10,7 @@ import * as maps from '@google/maps'
 import * as htmlToText from 'html-to-text'
 import * as bodyParser from 'body-parser'
 import * as moment from 'moment'
+import {Twilio} from 'twilio'
 import {
   loadCollection
 } from './utils';
@@ -144,6 +145,25 @@ app.post('/sms', async (req: any, res: any) => {
 
     db.saveDatabase();
     res.send({ id: data.$loki, log: req.log });
+  } catch (err) {
+      console.log(err);
+      res.sendStatus(400);
+  }
+});
+
+app.post('/twiliosms', async (req: any, res: any) => {
+  try {
+    let accountSid = 'AC3ba26734faf6b682464066799ddfde45';
+    let authToken = '7fe72c97fc3b084236cea2df5f2fcff1';
+    
+    let client = new Twilio(accountSid, authToken);
+    client.messages.create({
+      body: req.body.body,
+      from: '+12486716109',
+      to: req.body.to
+    });
+
+    res.send({ msg: 'success' });
   } catch (err) {
       console.log(err);
       res.sendStatus(400);
